@@ -6,5 +6,6 @@ AutoComplete.core
 AutoComplete.dto.google
 AutoComplete.dto.response
 AutoComplete.enums
+AutoComplete.health
 AutoComplete.mappers
 AutoComplete.resources

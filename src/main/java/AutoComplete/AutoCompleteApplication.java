@@ -1,6 +1,7 @@
 package AutoComplete;
 
 import AutoComplete.config.AutoCompleteModule;
+import AutoComplete.health.AutoCompleteHealthCheck;
 import AutoComplete.resources.AutoCompleteResource;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
@@ -41,6 +42,7 @@ public class AutoCompleteApplication extends Application<AutoCompleteConfigurati
                     final Environment environment) {
         injector = Guice.createInjector(new AutoCompleteModule(configuration.getPropertyFileName()));
         environment.jersey().register(injector.getInstance(AutoCompleteResource.class));
+        environment.healthChecks().register("AutoCompleteHealthCheck", new AutoCompleteHealthCheck());
     }
 
 }

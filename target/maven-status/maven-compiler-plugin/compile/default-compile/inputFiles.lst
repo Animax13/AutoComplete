@@ -7,6 +7,7 @@
 /Users/mmt6919/Documents/Projects/AutoComplete/src/main/java/AutoComplete/dto/google/GoogleAutoCompleteResponse.java
 /Users/mmt6919/Documents/Projects/AutoComplete/src/main/java/AutoComplete/config/AutoCompleteModule.java
 /Users/mmt6919/Documents/Projects/AutoComplete/src/main/java/AutoComplete/cache/AutoCompleteCache.java
+/Users/mmt6919/Documents/Projects/AutoComplete/src/main/java/AutoComplete/health/AutoCompleteHealthCheck.java
 /Users/mmt6919/Documents/Projects/AutoComplete/src/main/java/AutoComplete/dto/response/AutoCompleteResponse.java
 /Users/mmt6919/Documents/Projects/AutoComplete/src/main/java/AutoComplete/dto/response/AutoCompletePrediction.java
 /Users/mmt6919/Documents/Projects/AutoComplete/src/main/java/AutoComplete/AutoCompleteConfiguration.java
