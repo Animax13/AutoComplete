@@ -39,7 +39,7 @@ public class AutoCompleteApplication extends Application<AutoCompleteConfigurati
     @Override
     public void run(final AutoCompleteConfiguration configuration,
                     final Environment environment) {
-        injector = Guice.createInjector(new AutoCompleteModule());
+        injector = Guice.createInjector(new AutoCompleteModule(configuration.getPropertyFileName()));
         environment.jersey().register(injector.getInstance(AutoCompleteResource.class));
     }
 

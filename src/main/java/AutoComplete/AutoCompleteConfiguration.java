@@ -15,8 +15,14 @@ public class AutoCompleteConfiguration extends Configuration {
     @JsonProperty("redis")
     private RedisClientFactory<String, String> redisClientFactory;
 
+    @JsonProperty
+    private String propertyFileName;
+
     public RedisClientFactory<String, String> getRedisClientFactory() {
         return redisClientFactory;
     }
 
+    public String getPropertyFileName() {
+        return propertyFileName;
+    }
 }

@@ -1,7 +1,9 @@
 package AutoComplete.api;
 
 import AutoComplete.dto.google.GoogleAutoCompleteResponse;
+import com.google.inject.name.Named;
 
+import javax.inject.Inject;
 import javax.inject.Singleton;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
@@ -10,12 +12,21 @@ import java.text.MessageFormat;
 @Singleton
 public class GoogleAutoCompleteAPI {
 
-    private final String COMPONENTS = "country:in";
-    private final String KEY = "AIzaSyB88LTfd1C5OQyrU9NhEQLnTLK7-O4ewWM";
-    private final String URLTemplate = "https://maps.googleapis.com/maps/api/place/autocomplete/json?input={0}&components={1}&key={2}";
+    private String urlTemplate;
+    private String key;
+    private String components;
+
+    @Inject
+    public GoogleAutoCompleteAPI (@Named("url-template") String urlTemplate,
+                                  @Named("key") String key,
+                                  @Named("components") String components) {
+        this.urlTemplate = urlTemplate;
+        this.key = key;
+        this.components = components;
+    }
 
     public GoogleAutoCompleteResponse callGoogleAutoComplete(String query) {
-        String url = MessageFormat.format(URLTemplate, query, COMPONENTS, KEY);
+        String url = MessageFormat.format(urlTemplate, query, components, key);
         Client client = ClientBuilder.newClient();
         return client
                 .target(url)

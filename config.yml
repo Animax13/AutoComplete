@@ -16,3 +16,5 @@ redis:
     type: default
     commandLatencyCollector:
       type: default
+
+propertyFileName: application
