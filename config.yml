@@ -1,0 +1,18 @@
+logging:
+  level: INFO
+  loggers:
+    AutoComplete: DEBUG
+
+redis:
+  type: basic
+  name: my-redis-use-case
+  node:
+    type: redis
+    node: "127.0.0.1:6379"
+    clientName: AutoComplete
+  redisCodec:
+    type: string
+  clientResources:
+    type: default
+    commandLatencyCollector:
+      type: default
