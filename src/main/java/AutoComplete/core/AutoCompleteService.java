@@ -27,13 +27,15 @@ public class AutoCompleteService {
     private final AutoCompletePredictionMapper mapper = Mappers.getMapper(AutoCompletePredictionMapper.class);
     private ObjectMapper objectMapper;
 
-    @Inject
     private  GoogleAutoCompleteAPI googleAutoCompleteAPI;
 
-    @Inject
     private AutoCompleteCache autoCompleteCache;
 
-    public AutoCompleteService() {
+    @Inject
+    public AutoCompleteService(GoogleAutoCompleteAPI googleAutoCompleteAPI,
+                               AutoCompleteCache autoCompleteCache) {
+        this.googleAutoCompleteAPI = googleAutoCompleteAPI;
+        this.autoCompleteCache = autoCompleteCache;
         this.objectMapper = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
     }
 
