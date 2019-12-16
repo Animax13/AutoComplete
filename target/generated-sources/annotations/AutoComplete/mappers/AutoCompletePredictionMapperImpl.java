@@ -7,7 +7,7 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2019-12-06T17:09:02+0530",
+    date = "2019-12-12T23:00:38+0530",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 1.8.0_202 (Oracle Corporation)"
 )
 public class AutoCompletePredictionMapperImpl extends AutoCompletePredictionMapper {
